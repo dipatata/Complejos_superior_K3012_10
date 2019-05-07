@@ -9,3 +9,14 @@ D:\Utn\Superior\tp\matematica_superior\matematica_superior\obj\Debug\matematica_
 D:\Utn\Superior\tp\matematica_superior\matematica_superior\obj\Debug\matematica_superior.pdb
 D:\Utn\Superior\tp\matematica_superior\matematica_superior\obj\Debug\matematica_superior.MenuPrincipal.resources
 D:\Utn\Superior\tp\matematica_superior\matematica_superior\obj\Debug\matematica_superior.OperacionesBasicas.resources
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\bin\Debug\matematica_superior.exe.config
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\bin\Debug\matematica_superior.exe
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\bin\Debug\matematica_superior.pdb
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.csprojAssemblyReference.cache
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.MenuPrincipal.resources
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.OperacionesBasicas.resources
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.Properties.Resources.resources
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.csproj.GenerateResource.cache
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.csproj.CoreCompileInputs.cache
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.exe
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.pdb

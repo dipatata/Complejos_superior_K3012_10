@@ -30,5 +30,15 @@ namespace matematica_superior.Modelo
             }
             return (float) angulo % DOS_PI;
         }
+
+        public static float ClampFloat(float f)
+        {
+            float clampArgumento = f;
+            if (clampArgumento < 0.000001 && clampArgumento > -0.000001)
+            {
+                clampArgumento = 0;
+            }
+            return clampArgumento;
+        }
     }
 }

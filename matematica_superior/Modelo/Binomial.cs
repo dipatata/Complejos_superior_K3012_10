@@ -109,7 +109,7 @@ namespace matematica_superior.Modelo
 
         public override string ToString()
         {
-            return "("+parteReal+","+parteImaginaria+")";
+            return "("+CommonHelper.ClampFloat(parteReal)+","+ CommonHelper.ClampFloat(parteImaginaria) +")";
         }
     }
 }
