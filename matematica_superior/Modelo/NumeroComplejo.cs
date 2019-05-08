@@ -11,10 +11,10 @@ namespace matematica_superior.Modelo
     {
         public abstract Polar GetPolar();
         public abstract Binomial GetBinomial();
-        public abstract float GetModulo();
-        public abstract float GetArgumento();
-        public abstract float GetParteReal();
-        public abstract float GetParteImaginaria();
+        public abstract double GetModulo();
+        public abstract double GetArgumento();
+        public abstract double GetParteReal();
+        public abstract double GetParteImaginaria();
         public abstract NumeroComplejo Sumar(NumeroComplejo numeroComplejo);
         public abstract NumeroComplejo Restar(NumeroComplejo numeroComplejo);
         public abstract NumeroComplejo Multiplicar(NumeroComplejo numeroComplejo);

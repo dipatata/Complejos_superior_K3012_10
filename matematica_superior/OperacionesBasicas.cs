@@ -114,10 +114,5 @@ namespace matematica_superior
         {
             return (Z1 == null || Z2 == null);
         }
-
-        private void OperacionesBasicas_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

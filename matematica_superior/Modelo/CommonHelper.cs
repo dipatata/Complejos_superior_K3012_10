@@ -8,21 +8,13 @@ namespace matematica_superior.Modelo
 {
     class CommonHelper
     {
-        public static readonly float PI = (float) Math.PI;
-        public static readonly float DOS_PI = (float) Math.PI * 2;
-        public static readonly float MEDIO_PI = (float) (Math.PI / 2);
-        public static readonly float CUARTO_PI = (float)(Math.PI / 4);
-        public static readonly float TRES_CUARTOS_PI = (float)(Math.PI * (3/4));
-        public static float ClampAngulo(float angulo)
-        {
-            if (angulo<0)
-            {
-                return ClampAngulo(angulo + DOS_PI);
-            }
-            return angulo % DOS_PI;
-        }
+        public static readonly double PI = (float) Math.PI;
+        public static readonly double DOS_PI = (float) Math.PI * 2;
+        public static readonly double MEDIO_PI = (float) (Math.PI / 2);
+        public static readonly double CUARTO_PI = (float)(Math.PI / 4);
+        public static readonly double TRES_CUARTOS_PI = (float)(Math.PI * (3/4));
 
-        public static float ClampAngulo(double angulo)
+        public static double ClampAngulo(double angulo)
         {
             if (angulo < 0)
             {
@@ -30,15 +22,29 @@ namespace matematica_superior.Modelo
             }
             return (float) angulo % DOS_PI;
         }
-
-        public static float ClampFloat(float f)
+        public static int Cuadrante(double parteReal, double parteImaginaria)
         {
-            float clampArgumento = f;
-            if (clampArgumento < 0.000001 && clampArgumento > -0.000001)
+            if (parteReal>=0)
             {
-                clampArgumento = 0;
+                if (parteImaginaria >= 0)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 4;
+                }
+            } else
+            {
+                if (parteImaginaria >= 0)
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
             }
-            return clampArgumento;
         }
     }
 }

@@ -9,10 +9,10 @@ namespace matematica_superior.Modelo
 {
     class Polar : NumeroComplejo
     {
-        private float modulo;
-        private float argumento;
+        private double modulo;
+        private double argumento;
         private static Regex regexPolar = new Regex("^\\[\\d+,(\\d+|pi|pi\\/2|pi\\/4)\\]$");
-        public Polar(float modulo, float argumento)
+        public Polar(double modulo, double argumento)
         {
             this.modulo = modulo;
             this.argumento = CommonHelper.ClampAngulo(argumento);
@@ -22,24 +22,24 @@ namespace matematica_superior.Modelo
         {
             if (!regexPolar.IsMatch(polar)) throw new ParseException("", ParseException.TipoDeError.ERROR_DE_PARSEO_POLAR);
             int posicionComa = polar.IndexOf(',');
-            float modulo = float.Parse(polar.Substring(1, posicionComa - 1));
+            double modulo = double.Parse(polar.Substring(1, posicionComa - 1));
             string argumentoStr = polar.Substring(posicionComa + 1, polar.Length - 2 - posicionComa);
-            float argumento;
+            double argumento;
             if (argumentoStr.Equals("pi"))
             {
-                argumento = (float)Math.PI;
+                argumento = Math.PI;
             }
             else if (argumentoStr.Equals("pi/2"))
             {
-                argumento = (float)Math.PI / 2;
+                argumento = Math.PI / 2;
             }
             else if (argumentoStr.Equals("pi/4"))
             {
-                argumento = (float)Math.PI / 4;
+                argumento = Math.PI / 4;
             }
             else
             {
-                argumento = float.Parse(argumentoStr);
+                argumento = double.Parse(argumentoStr);
             }
             return new Polar(modulo, argumento);
         }
@@ -49,7 +49,7 @@ namespace matematica_superior.Modelo
             return new Binomial(GetParteReal(), GetParteImaginaria());
         }
 
-        public override float GetModulo()
+        public override double GetModulo()
         {
             return modulo;
         }
@@ -88,23 +88,23 @@ namespace matematica_superior.Modelo
             return this.Multiplicar(this.Conjugado());
         }
 
-        public override float GetArgumento()
+        public override double GetArgumento()
         {
             return argumento;
         }
 
-        public override float GetParteReal()
+        public override double GetParteReal()
         {
-            return modulo * (float)Math.Cos(argumento);
+            return modulo * Math.Cos(argumento);
         }
 
-        public override float GetParteImaginaria()
+        public override double GetParteImaginaria()
         {
-            return modulo * (float)Math.Sin(argumento);
+            return modulo * Math.Sin(argumento);
         }
         public override string ToString()
         {
-            return "[" + modulo + "," + argumento + "]";
+            return "[" + Math.Round(modulo, 5) + " , " + Math.Round(argumento,5) + "]";
         }
     }
 }

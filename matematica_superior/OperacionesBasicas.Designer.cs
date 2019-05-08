@@ -234,7 +234,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "OperacionesBasicas";
             this.Text = "OperacionesBasicas";
-            this.Load += new System.EventHandler(this.OperacionesBasicas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

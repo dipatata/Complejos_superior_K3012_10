@@ -10,10 +10,10 @@ namespace matematica_superior.Modelo
     class Binomial : NumeroComplejo
     {
         private static Regex regexBinomial = new Regex("^\\(\\d+,\\d+\\)$");
-        private float parteReal;
-        private float parteImaginaria;
+        private double parteReal;
+        private double parteImaginaria;
 
-        public Binomial(float a, float b)
+        public Binomial(double a, double b)
         {
             this.parteReal = a;
             this.parteImaginaria = b;
@@ -23,9 +23,9 @@ namespace matematica_superior.Modelo
         {
             if (!regexBinomial.IsMatch(binomial)) throw new ParseException("", ParseException.TipoDeError.ERROR_DE_PARSEO_BINOMIAL);
             int posicionComa = binomial.IndexOf(',');
-            float parteReal = float.Parse(binomial.Substring(1, posicionComa-1));
+            double parteReal = double.Parse(binomial.Substring(1, posicionComa-1));
             string parteImaginariaString = binomial.Substring(posicionComa + 1, binomial.Length - 2 - posicionComa);
-            float parteImaginaria = float.Parse(parteImaginariaString);
+            double parteImaginaria = double.Parse(parteImaginariaString);
             return new Binomial(parteReal, parteImaginaria);
         }
 
@@ -39,22 +39,30 @@ namespace matematica_superior.Modelo
             return new Polar(GetModulo(), GetArgumento());
         }
 
-        public override float GetArgumento()
+        public override double GetArgumento()
         {
             if (parteReal != 0)
             {
-                return CommonHelper.ClampAngulo(
-                    Math.Atan(parteImaginaria / parteReal)
-                );
+                int cuadrante = CommonHelper.Cuadrante(parteReal, parteImaginaria);
+                double angulo = Math.Atan(parteImaginaria / parteReal);
+                if (cuadrante == 2 || cuadrante == 3)
+                {
+                    angulo += CommonHelper.PI;
+                }
+                if (cuadrante == 4)
+                {
+                    angulo += CommonHelper.DOS_PI;
+                }
+                return angulo;
             } else
             {
                 return (parteImaginaria >= 0) ? CommonHelper.CUARTO_PI : CommonHelper.TRES_CUARTOS_PI;
             }
         }
 
-        public override float GetModulo()
+        public override double GetModulo()
         {
-            return (float) 
+            return
             Math.Sqrt(
                 Math.Pow(parteReal, 2) + Math.Pow(parteImaginaria, 2)
             );
@@ -62,8 +70,8 @@ namespace matematica_superior.Modelo
 
         public override NumeroComplejo Sumar(NumeroComplejo numeroComplejo)
         {
-            return new Binomial(this.parteReal + numeroComplejo.GetBinomial().parteReal, 
-                this.parteImaginaria + numeroComplejo.GetBinomial().parteImaginaria);
+            return new Binomial(this.parteReal + numeroComplejo.GetParteReal(), 
+                this.parteImaginaria + numeroComplejo.GetParteImaginaria());
         }
 
         public override NumeroComplejo Restar(NumeroComplejo numeroComplejo)
@@ -97,19 +105,19 @@ namespace matematica_superior.Modelo
             return new Binomial((float)(Math.Pow(parteReal, 2) + Math.Pow(parteImaginaria, 2)), 0);
         }
 
-        public override float GetParteReal()
+        public override double GetParteReal()
         {
             return parteReal;
         }
 
-        public override float GetParteImaginaria()
+        public override double GetParteImaginaria()
         {
             return parteImaginaria;
         }
 
         public override string ToString()
         {
-            return "("+CommonHelper.ClampFloat(parteReal)+","+ CommonHelper.ClampFloat(parteImaginaria) +")";
+            return "("+Math.Round(parteReal, 5)+" , "+ Math.Round(parteImaginaria) +")";
         }
     }
 }
