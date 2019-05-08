@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.errorZ2Label = new System.Windows.Forms.Label();
             this.errorZ1Label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,10 +43,15 @@
             this.botonSuma = new System.Windows.Forms.Button();
             this.botonMult = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.resultadoLabel = new System.Windows.Forms.Label();
             this.binomialButton = new System.Windows.Forms.RadioButton();
             this.polarOption = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.resultadoLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.escalaLabel = new System.Windows.Forms.Label();
+            this.dibujarGuiasBox = new System.Windows.Forms.CheckBox();
+            this.cortesBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -52,6 +59,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.errorZ2Label);
             this.groupBox1.Controls.Add(this.errorZ1Label);
             this.groupBox1.Controls.Add(this.label2);
@@ -64,6 +73,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingreso numeros";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(211, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 20);
+            this.label5.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(211, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(19, 20);
+            this.label4.TabIndex = 6;
             // 
             // errorZ2Label
             // 
@@ -172,6 +197,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.resultadoLabel);
             this.groupBox3.Controls.Add(this.binomialButton);
             this.groupBox3.Controls.Add(this.polarOption);
@@ -182,6 +208,22 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultado";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label6.Location = new System.Drawing.Point(317, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 20);
+            this.label6.TabIndex = 8;
+            // 
+            // resultadoLabel
+            // 
+            this.resultadoLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.resultadoLabel.Location = new System.Drawing.Point(51, 42);
+            this.resultadoLabel.Name = "resultadoLabel";
+            this.resultadoLabel.Size = new System.Drawing.Size(251, 20);
+            this.resultadoLabel.TabIndex = 8;
             // 
             // binomialButton
             // 
@@ -216,19 +258,59 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Z3";
             // 
-            // resultadoLabel
+            // label7
             // 
-            this.resultadoLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.resultadoLabel.Location = new System.Drawing.Point(51, 42);
-            this.resultadoLabel.Name = "resultadoLabel";
-            this.resultadoLabel.Size = new System.Drawing.Size(251, 20);
-            this.resultadoLabel.TabIndex = 8;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(400, 216);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 17);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Escala: ";
+            // 
+            // escalaLabel
+            // 
+            this.escalaLabel.AutoSize = true;
+            this.escalaLabel.Location = new System.Drawing.Point(464, 216);
+            this.escalaLabel.Name = "escalaLabel";
+            this.escalaLabel.Size = new System.Drawing.Size(24, 17);
+            this.escalaLabel.TabIndex = 6;
+            this.escalaLabel.Text = "10";
+            // 
+            // dibujarGuiasBox
+            // 
+            this.dibujarGuiasBox.AutoSize = true;
+            this.dibujarGuiasBox.Checked = true;
+            this.dibujarGuiasBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.dibujarGuiasBox.Location = new System.Drawing.Point(522, 216);
+            this.dibujarGuiasBox.Name = "dibujarGuiasBox";
+            this.dibujarGuiasBox.Size = new System.Drawing.Size(113, 21);
+            this.dibujarGuiasBox.TabIndex = 7;
+            this.dibujarGuiasBox.Text = "Dibujar guias";
+            this.dibujarGuiasBox.UseVisualStyleBackColor = true;
+            this.dibujarGuiasBox.CheckedChanged += new System.EventHandler(this.dibujarGuiasBox_CheckedChanged);
+            // 
+            // cortesBox
+            // 
+            this.cortesBox.AutoSize = true;
+            this.cortesBox.Checked = true;
+            this.cortesBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cortesBox.Location = new System.Drawing.Point(658, 216);
+            this.cortesBox.Name = "cortesBox";
+            this.cortesBox.Size = new System.Drawing.Size(175, 21);
+            this.cortesBox.TabIndex = 8;
+            this.cortesBox.Text = "Dibujar cortes con ejes";
+            this.cortesBox.UseVisualStyleBackColor = true;
+            this.cortesBox.CheckedChanged += new System.EventHandler(this.cortesBox_CheckedChanged);
             // 
             // OperacionesBasicas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 352);
+            this.ClientSize = new System.Drawing.Size(894, 564);
+            this.Controls.Add(this.cortesBox);
+            this.Controls.Add(this.dibujarGuiasBox);
+            this.Controls.Add(this.escalaLabel);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -240,6 +322,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -262,5 +345,12 @@
         private System.Windows.Forms.RadioButton binomialButton;
         private System.Windows.Forms.RadioButton polarOption;
         private System.Windows.Forms.Label resultadoLabel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label escalaLabel;
+        private System.Windows.Forms.CheckBox dibujarGuiasBox;
+        private System.Windows.Forms.CheckBox cortesBox;
     }
 }
