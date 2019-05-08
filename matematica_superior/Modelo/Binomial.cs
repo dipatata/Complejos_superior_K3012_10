@@ -9,7 +9,7 @@ namespace matematica_superior.Modelo
 {
     class Binomial : NumeroComplejo
     {
-        private static Regex regexBinomial = new Regex("^\\(\\d+,\\d+\\)$");
+        private static Regex regexBinomial = new Regex("^\\(\\-?\\d+,\\-?\\d+\\)$");
         private double parteReal;
         private double parteImaginaria;
 

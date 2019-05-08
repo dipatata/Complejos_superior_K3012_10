@@ -11,7 +11,7 @@ namespace matematica_superior.Modelo
     {
         private double modulo;
         private double argumento;
-        private static Regex regexPolar = new Regex("^\\[\\d+,(\\d+|pi|pi\\/2|pi\\/4)\\]$");
+        private static Regex regexPolar = new Regex("^\\[\\d+,(\\-?\\d+|pi|pi\\/2|pi\\/4)\\]$");
         public Polar(double modulo, double argumento)
         {
             this.modulo = modulo;
