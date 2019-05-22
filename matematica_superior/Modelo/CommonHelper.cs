@@ -8,11 +8,11 @@ namespace matematica_superior.Modelo
 {
     class CommonHelper
     {
-        public static readonly double PI = (float) Math.PI;
-        public static readonly double DOS_PI = (float) Math.PI * 2;
-        public static readonly double MEDIO_PI = (float) (Math.PI / 2);
+        public static readonly double PI = (float)Math.PI;
+        public static readonly double DOS_PI = (float)Math.PI * 2;
+        public static readonly double MEDIO_PI = (float)(Math.PI / 2);
         public static readonly double CUARTO_PI = (float)(Math.PI / 4);
-        public static readonly double TRES_CUARTOS_PI = (float)(Math.PI * (3/4));
+        public static readonly double TRES_CUARTOS_PI = (float)(Math.PI * (3 / 4));
 
         public static double ClampAngulo(double angulo)
         {
@@ -20,11 +20,11 @@ namespace matematica_superior.Modelo
             {
                 return ClampAngulo(angulo + DOS_PI);
             }
-            return (float) angulo % DOS_PI;
+            return (float)angulo % DOS_PI;
         }
         public static int Cuadrante(double parteReal, double parteImaginaria)
         {
-            if (parteReal>=0)
+            if (parteReal >= 0)
             {
                 if (parteImaginaria >= 0)
                 {
@@ -34,7 +34,8 @@ namespace matematica_superior.Modelo
                 {
                     return 4;
                 }
-            } else
+            }
+            else
             {
                 if (parteImaginaria >= 0)
                 {
@@ -46,5 +47,22 @@ namespace matematica_superior.Modelo
                 }
             }
         }
+        public static int Mcd(int num1, int num2)
+        {
+            int mcd = 0;
+            int a = Math.Max(num1, num2);
+            int b = Math.Min(num1, num2);
+            if (b==0)
+            {
+                return a;
+            }
+            do
+            {
+                mcd = b;
+                b = a % b;
+                a = mcd;
+            } while (b != 0);
+            return mcd;
+        }
     }
-}
+ }

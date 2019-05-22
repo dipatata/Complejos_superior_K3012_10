@@ -31,6 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.complejosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formaPolarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operacionesAvanzadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.raicesPrimitivasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +50,9 @@
             // complejosToolStripMenuItem
             // 
             this.complejosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formaPolarToolStripMenuItem});
+            this.formaPolarToolStripMenuItem,
+            this.operacionesAvanzadasToolStripMenuItem,
+            this.raicesPrimitivasToolStripMenuItem});
             this.complejosToolStripMenuItem.Name = "complejosToolStripMenuItem";
             this.complejosToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.complejosToolStripMenuItem.Text = "Complejos";
@@ -56,9 +60,23 @@
             // formaPolarToolStripMenuItem
             // 
             this.formaPolarToolStripMenuItem.Name = "formaPolarToolStripMenuItem";
-            this.formaPolarToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.formaPolarToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.formaPolarToolStripMenuItem.Text = "Operaciones Basicas";
             this.formaPolarToolStripMenuItem.Click += new System.EventHandler(this.formaPolarToolStripMenuItem_Click);
+            // 
+            // operacionesAvanzadasToolStripMenuItem
+            // 
+            this.operacionesAvanzadasToolStripMenuItem.Name = "operacionesAvanzadasToolStripMenuItem";
+            this.operacionesAvanzadasToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.operacionesAvanzadasToolStripMenuItem.Text = "Operaciones avanzadas";
+            this.operacionesAvanzadasToolStripMenuItem.Click += new System.EventHandler(this.operacionesAvanzadasToolStripMenuItem_Click);
+            // 
+            // raicesPrimitivasToolStripMenuItem
+            // 
+            this.raicesPrimitivasToolStripMenuItem.Name = "raicesPrimitivasToolStripMenuItem";
+            this.raicesPrimitivasToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.raicesPrimitivasToolStripMenuItem.Text = "Raices primitivas";
+            this.raicesPrimitivasToolStripMenuItem.Click += new System.EventHandler(this.raicesPrimitivasToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
@@ -82,6 +100,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem complejosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formaPolarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem operacionesAvanzadasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem raicesPrimitivasToolStripMenuItem;
     }
 }
 

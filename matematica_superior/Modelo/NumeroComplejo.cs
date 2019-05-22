@@ -41,5 +41,9 @@ namespace matematica_superior.Modelo
         {
             return new Binomial(0,0);
         }
+
+        public abstract List<NumeroComplejo> ObtenerRaicesNaturales(int n);
+
+        public abstract NumeroComplejo Potencia(int n);
     }
 }

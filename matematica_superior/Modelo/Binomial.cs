@@ -117,7 +117,17 @@ namespace matematica_superior.Modelo
 
         public override string ToString()
         {
-            return "("+Math.Round(parteReal, 5)+" , "+ Math.Round(parteImaginaria) +")";
+            return "("+Math.Round(parteReal, 5)+" , "+ Math.Round(parteImaginaria, 5) +")";
+        }
+
+        public override List<NumeroComplejo> ObtenerRaicesNaturales(int n)
+        {
+            return GetPolar().ObtenerRaicesNaturales(n);
+        }
+
+        public override NumeroComplejo Potencia(int n)
+        {
+            return GetPolar().Potencia(n);
         }
     }
 }

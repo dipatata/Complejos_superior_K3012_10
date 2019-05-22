@@ -24,7 +24,17 @@ namespace matematica_superior
 
         private void formaPolarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new OperacionesBasicas().Show();
+            new Operaciones(true, false).Show();
+        }
+
+        private void operacionesAvanzadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Operaciones(false, false).Show();
+        }
+
+        private void raicesPrimitivasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Operaciones(false, true).Show();
         }
     }
 }

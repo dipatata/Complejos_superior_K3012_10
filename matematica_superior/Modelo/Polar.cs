@@ -106,5 +106,21 @@ namespace matematica_superior.Modelo
         {
             return "[" + Math.Round(modulo, 5) + " , " + Math.Round(argumento,5) + "]";
         }
+
+        public override List<NumeroComplejo> ObtenerRaicesNaturales(int n)
+        {
+            List<NumeroComplejo> raices = new List<NumeroComplejo>();
+            double ro = Math.Pow(this.modulo, (double) 1 / n);
+            for (int i=0;i<n;i++)
+            {
+                double alfa = (argumento + 2 * Math.PI * i) / n;
+                raices.Add(new Polar(ro, alfa));
+            }
+            return raices;
+        }
+        public override NumeroComplejo Potencia(int n)
+        {
+            return new Polar(Math.Pow(modulo, n), CommonHelper.ClampAngulo(argumento * n));
+        }
     }
 }

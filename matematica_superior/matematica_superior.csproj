@@ -51,6 +51,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funcionalidades\Graficas.cs" />
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,11 +62,11 @@
     <Compile Include="Modelo\CommonHelper.cs" />
     <Compile Include="Modelo\NumeroComplejo.cs" />
     <Compile Include="Modelo\Polar.cs" />
-    <Compile Include="OperacionesBasicas.cs">
+    <Compile Include="Operaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OperacionesBasicas.Designer.cs">
-      <DependentUpon>OperacionesBasicas.cs</DependentUpon>
+    <Compile Include="Operaciones.Designer.cs">
+      <DependentUpon>Operaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="ParseException.cs" />
     <Compile Include="Program.cs" />
@@ -73,8 +74,8 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OperacionesBasicas.resx">
-      <DependentUpon>OperacionesBasicas.cs</DependentUpon>
+    <EmbeddedResource Include="Operaciones.resx">
+      <DependentUpon>Operaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
