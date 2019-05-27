@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace matematica_superior.Modelo
 {
@@ -13,6 +15,8 @@ namespace matematica_superior.Modelo
         public static readonly double MEDIO_PI = (float)(Math.PI / 2);
         public static readonly double CUARTO_PI = (float)(Math.PI / 4);
         public static readonly double TRES_CUARTOS_PI = (float)(Math.PI * (3 / 4));
+        private static Regex NUMEROS_NATURALES_REGEX = new Regex("^([123456789])(\\d)*$");
+        private static Regex NUMEROS_DECIMAL_REGEX = new Regex("((^(\\-)?\\d+\\.\\d{1,5}$)|(^(\\-)?([123456789])+\\d*$))");
 
         public static double ClampAngulo(double angulo)
         {
@@ -63,6 +67,23 @@ namespace matematica_superior.Modelo
                 a = mcd;
             } while (b != 0);
             return mcd;
+        }
+
+        public static void LimitarTextFieldNumerosNaturales(TextBox text)
+        {
+            if (!NUMEROS_NATURALES_REGEX.IsMatch(text.Text) && text.Text.Length > 0)
+            {
+                text.Text = text.Text.Substring(0, text.Text.Length - 1);
+            }
+        }
+        public static bool NumeroDecimalRegex(string text)
+        {
+            return NUMEROS_DECIMAL_REGEX.IsMatch(text);
+        }
+
+        public static string EliminarEspacios(string cadena)
+        {
+            return cadena.Replace(" ", "");
         }
     }
  }

@@ -33,6 +33,7 @@
             this.formaPolarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operacionesAvanzadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raicesPrimitivasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fasoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@
             this.complejosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.formaPolarToolStripMenuItem,
             this.operacionesAvanzadasToolStripMenuItem,
-            this.raicesPrimitivasToolStripMenuItem});
+            this.raicesPrimitivasToolStripMenuItem,
+            this.fasoresToolStripMenuItem});
             this.complejosToolStripMenuItem.Name = "complejosToolStripMenuItem";
             this.complejosToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.complejosToolStripMenuItem.Text = "Complejos";
@@ -78,6 +80,13 @@
             this.raicesPrimitivasToolStripMenuItem.Text = "Raices primitivas";
             this.raicesPrimitivasToolStripMenuItem.Click += new System.EventHandler(this.raicesPrimitivasToolStripMenuItem_Click);
             // 
+            // fasoresToolStripMenuItem
+            // 
+            this.fasoresToolStripMenuItem.Name = "fasoresToolStripMenuItem";
+            this.fasoresToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.fasoresToolStripMenuItem.Text = "Fasores";
+            this.fasoresToolStripMenuItem.Click += new System.EventHandler(this.fasoresToolStripMenuItem_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -102,6 +111,7 @@
         private System.Windows.Forms.ToolStripMenuItem formaPolarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem operacionesAvanzadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem raicesPrimitivasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fasoresToolStripMenuItem;
     }
 }
 

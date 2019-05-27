@@ -17,6 +17,10 @@ namespace matematica_superior.Funcionalidades
         public readonly int ancho = 220;
         private readonly int dottedLineSegmentLength = 3;
 
+        private readonly int initXSinusoidal = 50;
+        private readonly int initYSinusoidal = 350;
+        private readonly int anchoSinusoidal = 150;
+
         private float centroX;
         private float centroY;
         public int escala;
@@ -156,6 +160,19 @@ namespace matematica_superior.Funcionalidades
                 default:
                     return lapizNegro;
             }
+        }
+
+        public void DibujarSinusoidal(Graphics g, Sinusoidal s)
+        {
+            DibujarEjesSinusoidal(g);
+        }
+
+        private void DibujarEjesSinusoidal(Graphics g)
+        {
+            g.DrawLine(lapizNegro, initXSinusoidal, initYSinusoidal - anchoSinusoidal / 2, 
+                initXSinusoidal, initYSinusoidal + anchoSinusoidal / 2);
+            g.DrawLine(lapizNegro, initXSinusoidal, initYSinusoidal, initXSinusoidal + 500, 
+                initYSinusoidal);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace matematica_superior.Modelo
 {
     class Binomial : NumeroComplejo
     {
-        private static Regex regexBinomial = new Regex("^\\(\\-?\\d+,\\-?\\d+\\)$");
+        private static Regex regexBinomial = new Regex("\\((((\\-)?\\d+\\.\\d{1,5})|((\\-)?([123456789])+\\d*)),(((\\-)?\\d+\\.\\d{1,5})|((\\-)?([123456789])+\\d*))\\)$");
         private double parteReal;
         private double parteImaginaria;
 
@@ -21,6 +21,7 @@ namespace matematica_superior.Modelo
 
         public static Binomial ParsearBinomial(string binomial)
         {
+            binomial = CommonHelper.EliminarEspacios(binomial);
             if (!regexBinomial.IsMatch(binomial)) throw new ParseException("", ParseException.TipoDeError.ERROR_DE_PARSEO_BINOMIAL);
             int posicionComa = binomial.IndexOf(',');
             double parteReal = double.Parse(binomial.Substring(1, posicionComa-1));
@@ -128,6 +129,11 @@ namespace matematica_superior.Modelo
         public override NumeroComplejo Potencia(int n)
         {
             return GetPolar().Potencia(n);
+        }
+
+        public override string GetNotacionFasorial()
+        {
+            return GetPolar().GetNotacionFasorial();
         }
     }
 }

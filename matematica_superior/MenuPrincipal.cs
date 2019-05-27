@@ -36,5 +36,10 @@ namespace matematica_superior
         {
             new Operaciones(false, true).Show();
         }
+
+        private void fasoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Fasores().Show();
+        }
     }
 }

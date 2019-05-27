@@ -45,5 +45,6 @@ namespace matematica_superior.Modelo
         public abstract List<NumeroComplejo> ObtenerRaicesNaturales(int n);
 
         public abstract NumeroComplejo Potencia(int n);
+        public abstract string GetNotacionFasorial();
     }
 }

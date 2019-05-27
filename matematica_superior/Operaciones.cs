@@ -33,7 +33,6 @@ namespace matematica_superior
         private int defaultEscala = 10;
 
         private Graficas graficas;
-        private Regex numerosRegex = new Regex("^([123456789])(\\d)*$");
 
         private bool basicas;
         private bool primitivas;
@@ -265,10 +264,10 @@ namespace matematica_superior
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            actualizarEscala();
             base.OnPaint(e);
             Graphics g;
             g = e.Graphics;
+            actualizarEscala();
 
             graficas.DibujarEjes(g);
             graficas.DibujarGuias(g);
@@ -354,10 +353,7 @@ namespace matematica_superior
 
         private void nText_TextChanged(object sender, EventArgs e)
         {
-            if (!numerosRegex.IsMatch(nText.Text) && nText.Text.Length>0)
-            {
-                nText.Text = nText.Text.Substring(0, nText.Text.Length-1);
-            }
+            CommonHelper.LimitarTextFieldNumerosNaturales(nText);
             if (nText.Text.Length > 0)
             {
                 numeroNatural = int.Parse(nText.Text);

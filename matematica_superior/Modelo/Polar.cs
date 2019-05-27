@@ -11,7 +11,7 @@ namespace matematica_superior.Modelo
     {
         private double modulo;
         private double argumento;
-        private static Regex regexPolar = new Regex("^\\[\\d+,(\\-?\\d+|pi|pi\\/2|pi\\/4)\\]$");
+        private static Regex regexPolar = new Regex("^\\[(((\\-)?\\d+\\.\\d{1,5})|((\\-)?([123456789])+\\d*)),((((\\-)?\\d+\\.\\d{1,5})|((\\-)?([123456789])+\\d*))|pi|pi\\/2|pi\\/4)\\]$");
         public Polar(double modulo, double argumento)
         {
             this.modulo = modulo;
@@ -20,6 +20,7 @@ namespace matematica_superior.Modelo
 
         public static Polar ParsearPolar(string polar)
         {
+            polar = CommonHelper.EliminarEspacios(polar);
             if (!regexPolar.IsMatch(polar)) throw new ParseException("", ParseException.TipoDeError.ERROR_DE_PARSEO_POLAR);
             int posicionComa = polar.IndexOf(',');
             double modulo = double.Parse(polar.Substring(1, posicionComa - 1));
@@ -121,6 +122,10 @@ namespace matematica_superior.Modelo
         public override NumeroComplejo Potencia(int n)
         {
             return new Polar(Math.Pow(modulo, n), CommonHelper.ClampAngulo(argumento * n));
+        }
+        public override string GetNotacionFasorial()
+        {
+            return Math.Round(modulo, 5) + " e ^ (" + Math.Round(argumento, 5) + " j )";
         }
     }
 }

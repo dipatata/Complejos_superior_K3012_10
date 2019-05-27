@@ -20,3 +20,4 @@ D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matem
 D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.exe
 D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.pdb
 D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.Operaciones.resources
+D:\Utn\Superior\tp\Complejos_superior_K3012_10\Complejos_superior_K3012_10\matematica_superior\obj\Debug\matematica_superior.Fasores.resources
