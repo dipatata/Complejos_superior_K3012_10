@@ -15,7 +15,7 @@ namespace matematica_superior
             this.message = message;
             this.tipo = tipo;
         }
-        public enum TipoDeError { ERROR_DE_PARSEO, ERROR_DE_PARSEO_BINOMIAL, ERROR_DE_PARSEO_POLAR, TEXTO_VACIO };
+        public enum TipoDeError { ERROR_DE_PARSEO, ERROR_DE_PARSEO_BINOMIAL, ERROR_DE_PARSEO_POLAR, MAS_DE_UNA_COMA, TEXTO_VACIO };
 
         public string GetMessage()
         {
@@ -29,6 +29,8 @@ namespace matematica_superior
                     return "La forma polar es [a,b] donde a es el modulo, y b es el argumento";
                 case TipoDeError.TEXTO_VACIO:
                     return "";
+                case TipoDeError.MAS_DE_UNA_COMA:
+                    return "El separador decimal es un punto \".\"";
                 default:
                     return "Error desconocido";
             }

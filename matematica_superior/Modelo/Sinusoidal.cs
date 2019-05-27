@@ -8,10 +8,10 @@ namespace matematica_superior.Modelo
 {
     class Sinusoidal
     {
-        private double frecuencia;
-        private double fase;
-        private double amplitud;
-        private bool coseno;
+        public double frecuencia;
+        public double fase;
+        public double amplitud;
+        public bool coseno;
 
         public Sinusoidal(double frecuencia, double fase, double amplitud, bool coseno)
         {

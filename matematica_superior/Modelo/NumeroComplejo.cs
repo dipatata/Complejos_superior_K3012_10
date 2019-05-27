@@ -26,6 +26,10 @@ namespace matematica_superior.Modelo
             ingreso = ingreso.Trim();
             if (ingreso.Length == 0 )
                 throw new ParseException("", ParseException.TipoDeError.TEXTO_VACIO);
+            if ((ingreso.Split(',').Length - 1) > 1)
+            {
+                throw new ParseException("", ParseException.TipoDeError.MAS_DE_UNA_COMA);
+            }
             if (ingreso[0] == '(')
             {
                 return Binomial.ParsearBinomial(ingreso);

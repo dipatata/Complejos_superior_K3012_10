@@ -347,6 +347,7 @@
             this.label7.Size = new System.Drawing.Size(58, 17);
             this.label7.TabIndex = 5;
             this.label7.Text = "Escala: ";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // escalaLabel
             // 
@@ -356,6 +357,7 @@
             this.escalaLabel.Size = new System.Drawing.Size(24, 17);
             this.escalaLabel.TabIndex = 6;
             this.escalaLabel.Text = "10";
+            this.escalaLabel.Click += new System.EventHandler(this.escalaLabel_Click);
             // 
             // dibujarGuiasBox
             // 

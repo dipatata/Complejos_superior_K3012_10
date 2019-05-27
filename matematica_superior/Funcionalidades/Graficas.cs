@@ -11,7 +11,6 @@ namespace matematica_superior.Funcionalidades
 {
     class Graficas
     {
-
         private readonly int initX = 350;
         private readonly int initY = 240;
         public readonly int ancho = 220;
@@ -20,17 +19,18 @@ namespace matematica_superior.Funcionalidades
         private readonly int initXSinusoidal = 50;
         private readonly int initYSinusoidal = 350;
         private readonly int anchoSinusoidal = 150;
+        private readonly int limiteTiempo = 1000;
 
         private float centroX;
         private float centroY;
         public int escala;
         System.Drawing.Pen lapizRojo = new System.Drawing.Pen(System.Drawing.Color.Red, 2);
+        System.Drawing.Pen lapizBordo = new System.Drawing.Pen(System.Drawing.Color.FromArgb(192, 0, 0), 1);
         System.Drawing.Pen lapizNegro = new System.Drawing.Pen(System.Drawing.Color.Black, 1);
         System.Drawing.Pen lapizVerde = new System.Drawing.Pen(System.Drawing.Color.FromArgb(0, 192, 0), 1);
         System.Drawing.Pen lapizAzul = new System.Drawing.Pen(System.Drawing.Color.FromArgb(0, 0, 192), 1);
         System.Drawing.Pen lapizPurpura = new System.Drawing.Pen(System.Drawing.Color.FromArgb(192, 0, 192), 1);
         System.Drawing.Pen lapizCremita = new System.Drawing.Pen(System.Drawing.Color.FromArgb(255, 192, 128), 1);
-
 
         public bool dibujarCortes = true;
         public bool dibujarEjes = true;
@@ -157,17 +157,46 @@ namespace matematica_superior.Funcionalidades
                     return lapizRojo;
                 case Colores.CREMITA:
                     return lapizCremita;
+                case Colores.BORDO:
+                    return lapizBordo;
                 default:
                     return lapizNegro;
             }
         }
 
-        public void DibujarSinusoidal(Graphics g, Sinusoidal s)
+        public void DibujarSinusoidal(Graphics g, Sinusoidal s, Colores colorr)
         {
-            DibujarEjesSinusoidal(g);
+            Pen lapiz = obtenerLapiz(colorr);
+            double x = 0;
+            double y = 0;
+            double t;
+            float step = 0.7f;
+            for (float grados=0; grados < limiteTiempo; grados+=step)
+            {
+                //Radianes
+                t = (grados * Math.PI / 180);
+                x = initXSinusoidal + t * escala;
+                if (s.coseno)
+                {
+                    y = initYSinusoidal -
+                        (s.amplitud * Math.Cos(2 * Math.PI * t * s.frecuencia + s.fase)) * escala;
+                } else
+                {
+                    y = initYSinusoidal -
+                        (s.amplitud * Math.Sin(2 * Math.PI * t * s.frecuencia + s.fase)) * escala;
+                }
+                g.DrawRectangle(lapiz, (float)x, (float)y, 1, 1);
+            }
         }
 
-        private void DibujarEjesSinusoidal(Graphics g)
+        public float DetectarStep(Sinusoidal s, int escala)
+        {
+            return
+                (float)((Math.Acos((0.8 - escala * s.amplitud * Math.Cos(s.fase)) * (-escala * s.amplitud)) - s.fase)
+                / (2 * Math.PI * s.frecuencia));
+        }
+
+        public void DibujarEjesSinusoidal(Graphics g)
         {
             g.DrawLine(lapizNegro, initXSinusoidal, initYSinusoidal - anchoSinusoidal / 2, 
                 initXSinusoidal, initYSinusoidal + anchoSinusoidal / 2);

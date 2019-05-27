@@ -16,8 +16,8 @@ namespace matematica_superior.Modelo
         public static readonly double CUARTO_PI = (float)(Math.PI / 4);
         public static readonly double TRES_CUARTOS_PI = (float)(Math.PI * (3 / 4));
         private static Regex NUMEROS_NATURALES_REGEX = new Regex("^([123456789])(\\d)*$");
-        private static Regex NUMEROS_DECIMAL_REGEX = new Regex("((^(\\-)?\\d+\\.\\d{1,5}$)|(^(\\-)?([123456789])+\\d*$))");
-
+        private static Regex NUMEROS_DECIMAL_SIN_CERO_REGEX = new Regex("((^(\\-)?\\d+\\.\\d{1,5}$)|(^(\\-)?([123456789])+\\d*$))");
+        private static Regex NUMEROS_DECIMAL_CON_CERO_REGEX = new Regex("((^(\\-)?\\d+\\.\\d{1,5}$)|(^(\\-)?([1234567890])+\\d*$))");
         public static double ClampAngulo(double angulo)
         {
             if (angulo < 0)
@@ -78,9 +78,12 @@ namespace matematica_superior.Modelo
         }
         public static bool NumeroDecimalRegex(string text)
         {
-            return NUMEROS_DECIMAL_REGEX.IsMatch(text);
+            return NUMEROS_DECIMAL_SIN_CERO_REGEX.IsMatch(text);
         }
-
+        public static bool NumeroDecimalRegexConCero(string text)
+        {
+            return NUMEROS_DECIMAL_CON_CERO_REGEX.IsMatch(text);
+        }
         public static string EliminarEspacios(string cadena)
         {
             return cadena.Replace(" ", "");

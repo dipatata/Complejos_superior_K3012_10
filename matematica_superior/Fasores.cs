@@ -28,10 +28,18 @@ namespace matematica_superior
         private Sinusoidal sinusoidal_b;
         private Sinusoidal sinusoidal_suma;
 
+        private bool graficar_a = false;
+        private bool graficar_b = false;
+        private bool graficar_suma = false;
+
+        private bool habilitado_a = false;
+        private bool habilitado_b = false;
+        private bool habilitado_suma = false;
+
         public Fasores()
         {
             InitializeComponent();
-            graficas = new Graficas(10);
+            graficas = new Graficas(20);
             fasorLabel_a.Text = "";
             fasorLabel_b.Text = "";
             labelFuncion_a.Text = "";
@@ -45,7 +53,20 @@ namespace matematica_superior
             base.OnPaint(e);
             Graphics g;
             g = e.Graphics;
-            graficas.DibujarSinusoidal(g, null);
+            escalaLabel.Text = (graficas.escala).ToString();
+            graficas.DibujarEjesSinusoidal(g);
+            if (graficar_a && habilitado_a)
+            {
+                graficas.DibujarSinusoidal(g, sinusoidal_a, Operaciones.Colores.BORDO);
+            }
+            if (graficar_b && habilitado_b)
+            {
+                graficas.DibujarSinusoidal(g, sinusoidal_b, Operaciones.Colores.AZUL);
+            }
+            if (graficar_suma && graficar_b && graficar_a && habilitado_suma)
+            {
+                graficas.DibujarSinusoidal(g, sinusoidal_suma, Operaciones.Colores.PURPURA);
+            }
         }
 
         private void amplitudText_a_TextChanged(object sender, EventArgs e)
@@ -58,13 +79,14 @@ namespace matematica_superior
             } else
             {
                 amplitudIngresada_a = false;
+                graficar_a = false;
                 amplitudLabel_a.ForeColor = Color.Red;
             }
         }
 
         private void faseText_a_TextChanged(object sender, EventArgs e)
         {
-            if (CommonHelper.NumeroDecimalRegex(faseText_a.Text))
+            if (CommonHelper.NumeroDecimalRegexConCero(faseText_a.Text))
             {
                 faseIngresada_a = true;
                 faseLabel_a.ForeColor = Color.Black;
@@ -73,6 +95,7 @@ namespace matematica_superior
             else
             {
                 faseIngresada_a = false;
+                graficar_a = false;
                 faseLabel_a.ForeColor = Color.Red;
             }
         }
@@ -88,6 +111,7 @@ namespace matematica_superior
             else
             {
                 frecuenciaIngresada_a = false;
+                graficar_a = false;
                 frecuenciaLabel_a.ForeColor = Color.Red;
             }
         }
@@ -103,6 +127,7 @@ namespace matematica_superior
             else
             {
                 amplitudIngresada_b = false;
+                graficar_b = false;
                 amplitudLabel_b.ForeColor = Color.Red;
             }
         }
@@ -118,6 +143,7 @@ namespace matematica_superior
             else
             {
                 faseIngresada_b = false;
+                graficar_b = false;
                 faseLabel_b.ForeColor = Color.Red;
             }
         }
@@ -133,6 +159,7 @@ namespace matematica_superior
             else
             {
                 frecuenciaIngresada_b = false;
+                graficar_b = false;
                 frecuenciaLabel_b.ForeColor = Color.Red;
             }
         }
@@ -193,12 +220,16 @@ namespace matematica_superior
             if (sinusoidal_a == null) return;
             labelFuncion_a.Text = sinusoidal_a.ToString();
             fasorLabel_a.Text = sinusoidal_a.GetFasor().GetNotacionFasorial();
+            graficar_a = true;
+            Refresh();
         }
         private void mostrarFuncion_b()
         {
             if (sinusoidal_b == null) return;
             labelFunction_b.Text = sinusoidal_b.ToString();
             fasorLabel_b.Text = sinusoidal_b.GetFasor().GetNotacionFasorial();
+            graficar_b = true;
+            Refresh();
         }
         private void mostrarFuncion_suma()
         {
@@ -210,7 +241,9 @@ namespace matematica_superior
             {
                 labelFuncion_suma.Text = sinusoidal_suma.GetFuncionSeno();
             }
+            graficar_suma = true;
             fasorLabel_suma.Text = sinusoidal_suma.GetFasor().GetNotacionFasorial();
+            Refresh();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -240,6 +273,36 @@ namespace matematica_superior
         {
             esCoseno_suma = !resultadoSenoOption.Checked;
             mostrarFuncion_suma();
+        }
+
+        private void masEscalaLabel_Click(object sender, EventArgs e)
+        {
+            graficas.escala++;
+            Refresh();
+        }
+
+        private void menosEscalaLabel_Click(object sender, EventArgs e)
+        {
+            graficas.escala--;
+            Refresh();
+        }
+
+        private void check_a_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitado_a = check_a.Checked;
+            Refresh();
+        }
+
+        private void check_b_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitado_b = check_b.Checked;
+            Refresh();
+        }
+
+        private void check_suma_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitado_suma = check_suma.Checked;
+            Refresh();
         }
     }
 }

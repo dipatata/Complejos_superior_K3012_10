@@ -29,11 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
+            this.fasorLabel_suma = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.labelFuncion_suma = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.resultadoSenoOption = new System.Windows.Forms.RadioButton();
             this.resultadoCosenoOption = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.fasorLabel_b = new System.Windows.Forms.Label();
             this.senoOption_b = new System.Windows.Forms.RadioButton();
@@ -47,6 +55,7 @@
             this.amplitudLabel_b = new System.Windows.Forms.Label();
             this.amplitudText_b = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.fasorLabel_a = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,19 +68,22 @@
             this.faseText_a = new System.Windows.Forms.TextBox();
             this.amplitudLabel_a = new System.Windows.Forms.Label();
             this.amplitudText_a = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.errorLabel = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.fasorLabel_suma = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.labelFuncion_suma = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.menosEscalaLabel = new System.Windows.Forms.Label();
+            this.masEscalaLabel = new System.Windows.Forms.Label();
+            this.escalaLabel = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.check_a = new System.Windows.Forms.CheckBox();
+            this.check_b = new System.Windows.Forms.CheckBox();
+            this.check_suma = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -85,6 +97,102 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingreso";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.errorLabel);
+            this.groupBox4.Controls.Add(this.fasorLabel_suma);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.labelFuncion_suma);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.resultadoSenoOption);
+            this.groupBox4.Controls.Add(this.resultadoCosenoOption);
+            this.groupBox4.Location = new System.Drawing.Point(776, 21);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(383, 267);
+            this.groupBox4.TabIndex = 11;
+            this.groupBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(8, 175);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 17);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Funcion:";
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorLabel.Location = new System.Drawing.Point(180, 35);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(182, 61);
+            this.errorLabel.TabIndex = 16;
+            this.errorLabel.Text = "Las funciones son de distinta frecuencia";
+            this.errorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.errorLabel.Visible = false;
+            // 
+            // fasorLabel_suma
+            // 
+            this.fasorLabel_suma.AutoSize = true;
+            this.fasorLabel_suma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fasorLabel_suma.Location = new System.Drawing.Point(84, 220);
+            this.fasorLabel_suma.Name = "fasorLabel_suma";
+            this.fasorLabel_suma.Size = new System.Drawing.Size(123, 20);
+            this.fasorLabel_suma.TabIndex = 17;
+            this.fasorLabel_suma.Text = "50000 e ^ (0.5j)";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(354, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 23);
+            this.label8.TabIndex = 15;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(8, 220);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 17);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Fasor:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 30);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Sumar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // labelFuncion_suma
+            // 
+            this.labelFuncion_suma.AutoSize = true;
+            this.labelFuncion_suma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuncion_suma.Location = new System.Drawing.Point(84, 175);
+            this.labelFuncion_suma.Name = "labelFuncion_suma";
+            this.labelFuncion_suma.Size = new System.Drawing.Size(222, 20);
+            this.labelFuncion_suma.TabIndex = 15;
+            this.labelFuncion_suma.Text = "50000 cos (50000t + 0.0005)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Mostrar como:";
             // 
             // resultadoSenoOption
             // 
@@ -110,25 +218,6 @@
             this.resultadoCosenoOption.UseVisualStyleBackColor = true;
             this.resultadoCosenoOption.CheckedChanged += new System.EventHandler(this.resultadoCosenoOption_CheckedChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 17);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Mostrar como:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(19, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Sumar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label7);
@@ -149,6 +238,14 @@
             this.groupBox3.Size = new System.Drawing.Size(357, 267);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(328, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(23, 23);
+            this.label7.TabIndex = 13;
             // 
             // label5
             // 
@@ -286,6 +383,14 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(358, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 23);
+            this.label6.TabIndex = 12;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -401,98 +506,119 @@
             this.amplitudText_a.TabIndex = 0;
             this.amplitudText_a.TextChanged += new System.EventHandler(this.amplitudText_a_TextChanged);
             // 
-            // groupBox4
+            // groupBox5
             // 
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.errorLabel);
-            this.groupBox4.Controls.Add(this.fasorLabel_suma);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.labelFuncion_suma);
-            this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.resultadoSenoOption);
-            this.groupBox4.Controls.Add(this.resultadoCosenoOption);
-            this.groupBox4.Location = new System.Drawing.Point(776, 21);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(383, 267);
-            this.groupBox4.TabIndex = 11;
-            this.groupBox4.TabStop = false;
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.check_suma);
+            this.groupBox5.Controls.Add(this.check_b);
+            this.groupBox5.Controls.Add(this.check_a);
+            this.groupBox5.Controls.Add(this.menosEscalaLabel);
+            this.groupBox5.Controls.Add(this.masEscalaLabel);
+            this.groupBox5.Controls.Add(this.escalaLabel);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Location = new System.Drawing.Point(952, 313);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(225, 212);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
             // 
-            // label6
+            // menosEscalaLabel
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(358, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 23);
-            this.label6.TabIndex = 12;
+            this.menosEscalaLabel.AutoSize = true;
+            this.menosEscalaLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.menosEscalaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menosEscalaLabel.Location = new System.Drawing.Point(74, 48);
+            this.menosEscalaLabel.Name = "menosEscalaLabel";
+            this.menosEscalaLabel.Size = new System.Drawing.Size(15, 20);
+            this.menosEscalaLabel.TabIndex = 15;
+            this.menosEscalaLabel.Text = "-";
+            this.menosEscalaLabel.Click += new System.EventHandler(this.menosEscalaLabel_Click);
             // 
-            // label7
+            // masEscalaLabel
             // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(328, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 23);
-            this.label7.TabIndex = 13;
+            this.masEscalaLabel.AutoSize = true;
+            this.masEscalaLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.masEscalaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masEscalaLabel.Location = new System.Drawing.Point(35, 48);
+            this.masEscalaLabel.Name = "masEscalaLabel";
+            this.masEscalaLabel.Size = new System.Drawing.Size(19, 20);
+            this.masEscalaLabel.TabIndex = 14;
+            this.masEscalaLabel.Text = "+";
+            this.masEscalaLabel.Click += new System.EventHandler(this.masEscalaLabel_Click);
             // 
-            // label8
+            // escalaLabel
             // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(354, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(23, 23);
-            this.label8.TabIndex = 15;
+            this.escalaLabel.AutoSize = true;
+            this.escalaLabel.Location = new System.Drawing.Point(74, 18);
+            this.escalaLabel.Name = "escalaLabel";
+            this.escalaLabel.Size = new System.Drawing.Size(24, 17);
+            this.escalaLabel.TabIndex = 13;
+            this.escalaLabel.Text = "10";
             // 
-            // errorLabel
+            // label10
             // 
-            this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(180, 35);
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(182, 61);
-            this.errorLabel.TabIndex = 16;
-            this.errorLabel.Text = "Las funciones son de distinta frecuencia";
-            this.errorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.errorLabel.Visible = false;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(10, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 17);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Escala: ";
             // 
-            // label9
+            // check_a
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 175);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 17);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Funcion:";
+            this.check_a.AutoSize = true;
+            this.check_a.Location = new System.Drawing.Point(13, 86);
+            this.check_a.Name = "check_a";
+            this.check_a.Size = new System.Drawing.Size(18, 17);
+            this.check_a.TabIndex = 16;
+            this.check_a.UseVisualStyleBackColor = true;
+            this.check_a.CheckedChanged += new System.EventHandler(this.check_a_CheckedChanged);
             // 
-            // fasorLabel_suma
+            // check_b
             // 
-            this.fasorLabel_suma.AutoSize = true;
-            this.fasorLabel_suma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fasorLabel_suma.Location = new System.Drawing.Point(84, 220);
-            this.fasorLabel_suma.Name = "fasorLabel_suma";
-            this.fasorLabel_suma.Size = new System.Drawing.Size(123, 20);
-            this.fasorLabel_suma.TabIndex = 17;
-            this.fasorLabel_suma.Text = "50000 e ^ (0.5j)";
+            this.check_b.AutoSize = true;
+            this.check_b.Location = new System.Drawing.Point(13, 118);
+            this.check_b.Name = "check_b";
+            this.check_b.Size = new System.Drawing.Size(18, 17);
+            this.check_b.TabIndex = 17;
+            this.check_b.UseVisualStyleBackColor = true;
+            this.check_b.CheckedChanged += new System.EventHandler(this.check_b_CheckedChanged);
             // 
-            // label11
+            // check_suma
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 220);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 17);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Fasor:";
+            this.check_suma.AutoSize = true;
+            this.check_suma.Location = new System.Drawing.Point(13, 152);
+            this.check_suma.Name = "check_suma";
+            this.check_suma.Size = new System.Drawing.Size(18, 17);
+            this.check_suma.TabIndex = 18;
+            this.check_suma.UseVisualStyleBackColor = true;
+            this.check_suma.CheckedChanged += new System.EventHandler(this.check_suma_CheckedChanged);
             // 
-            // labelFuncion_suma
+            // label12
             // 
-            this.labelFuncion_suma.AutoSize = true;
-            this.labelFuncion_suma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFuncion_suma.Location = new System.Drawing.Point(84, 175);
-            this.labelFuncion_suma.Name = "labelFuncion_suma";
-            this.labelFuncion_suma.Size = new System.Drawing.Size(222, 20);
-            this.labelFuncion_suma.TabIndex = 15;
-            this.labelFuncion_suma.Text = "50000 cos (50000t + 0.0005)";
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label12.Location = new System.Drawing.Point(45, 85);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(18, 17);
+            this.label12.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label13.Location = new System.Drawing.Point(45, 117);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(18, 17);
+            this.label13.TabIndex = 15;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label14.Location = new System.Drawing.Point(45, 151);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(18, 17);
+            this.label14.TabIndex = 19;
             // 
             // Fasores
             // 
@@ -500,16 +626,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1184, 537);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox1);
             this.Name = "Fasores";
-            this.Text = "Fasores";
+            this.Text = "W";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -556,5 +685,16 @@
         private System.Windows.Forms.Label fasorLabel_suma;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label labelFuncion_suma;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label menosEscalaLabel;
+        private System.Windows.Forms.Label masEscalaLabel;
+        private System.Windows.Forms.Label escalaLabel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox check_suma;
+        private System.Windows.Forms.CheckBox check_b;
+        private System.Windows.Forms.CheckBox check_a;
     }
 }

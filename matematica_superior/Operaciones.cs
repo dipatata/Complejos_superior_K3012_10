@@ -381,7 +381,7 @@ namespace matematica_superior
 
         public enum Colores
         {
-            PURPURA, AZUL, VERDE, CREMITA, ROJO
+            PURPURA, AZUL, VERDE, CREMITA, ROJO, BORDO
         };
 
         private void potenciaButton_Click(object sender, EventArgs e)
@@ -403,6 +403,16 @@ namespace matematica_superior
                 raicesNaturales = Z1.ObtenerRaicesNaturales(numeroNatural);
                 mostrarResultado();
             }
+        }
+
+        private void escalaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
