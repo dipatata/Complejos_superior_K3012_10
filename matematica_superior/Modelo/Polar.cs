@@ -11,7 +11,7 @@ namespace matematica_superior.Modelo
     {
         private double modulo;
         private double argumento;
-        private static Regex regexPolar = new Regex("^\\[(((\\-)?\\d+\\.\\d{1,5})|((\\-)?([1234567890])+\\d*)),((((\\-)?\\d+\\.\\d{1,5})|((\\-)?([1234567890])+\\d*))|pi|pi\\/2|pi\\/4)\\]$");
+        private static Regex regexPolar = new Regex("^\\[(((\\-)?\\d+\\.\\d{1,5})|((\\-)?([1234567890])+\\d*)),((((\\-)?\\d+\\.\\d{1,5})|((\\-)?([1234567890])+\\d*))|pi|2pi|pi\\/2|pi\\/4)\\]$");
         public Polar(double modulo, double argumento)
         {
             this.modulo = modulo;
@@ -38,7 +38,10 @@ namespace matematica_superior.Modelo
             {
                 argumento = Math.PI / 4;
             }
-            else
+            else if (argumentoStr.Equals("2pi"))
+            {
+                argumento = Math.PI * 2;
+            } else
             {
                 argumento = double.Parse(argumentoStr);
             }
