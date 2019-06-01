@@ -15,6 +15,7 @@ namespace matematica_superior.Modelo
         public static readonly double MEDIO_PI = (float)(Math.PI / 2);
         public static readonly double CUARTO_PI = (float)(Math.PI / 4);
         public static readonly double TRES_CUARTOS_PI = (float)(Math.PI * (3 / 4));
+        public static readonly double TRES_MEDIOS_PI = (float)(Math.PI * (3 / 2));
         private static Regex NUMEROS_NATURALES_REGEX = new Regex("^([123456789])(\\d)*$");
         private static Regex NUMEROS_DECIMAL_SIN_CERO_REGEX = new Regex("((^(\\-)?\\d+\\.\\d{1,5}$)|(^(\\-)?([123456789])+\\d*$))");
         private static Regex NUMEROS_DECIMAL_CON_CERO_REGEX = new Regex("((^(\\-)?\\d+\\.\\d{1,5}$)|(^(\\-)?([1234567890])+\\d*$))");

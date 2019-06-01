@@ -57,7 +57,7 @@ namespace matematica_superior.Modelo
                 return angulo;
             } else
             {
-                return (parteImaginaria >= 0) ? CommonHelper.CUARTO_PI : CommonHelper.TRES_CUARTOS_PI;
+                return (parteImaginaria >= 0) ? CommonHelper.MEDIO_PI : CommonHelper.TRES_MEDIOS_PI;
             }
         }
 
